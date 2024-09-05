@@ -1,17 +1,10 @@
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-1EAEDB)]()
-[![saythanks](https://img.shields.io/badge/say-thanks-1EAEDB.svg)](https://saythanks.io/to/catch.nkn%40gmail.com)
-[![](https://img.shields.io/badge/license-MIT-0a0a0a.svg?style=flat&colorA=1EAEDB)](https://qainsights.com)
-[![](https://img.shields.io/badge/%E2%9D%A4-QAInsights-0a0a0a.svg?style=flat&colorA=1EAEDB)](https://qainsights.com)
-[![](https://img.shields.io/badge/%E2%9D%A4-YouTube%20Channel-0a0a0a.svg?style=flat&colorA=1EAEDB)](https://www.youtube.com/user/QAInsights?sub_confirmation=1)
-[![](https://img.shields.io/badge/donate-paypal-1EAEDB)](https://www.paypal.com/paypalme/NAVEENKUMARN)
-
 # 🎯 Objective
 
 The objective of this exercise is to measure the response time trend of popular US retail websites during Thanksgiving and Black Friday 2021. This will help us to reveal the performance and its effect of retain giants.  
 
 # 🔝 Strategy
 
-This experiment **will not inject load** to the websites under test. The script will **send only one HTTP(S) request every 30 minutes** to measure the performance. The actual workload will be from the real users.
+This experiment **will not inject load** to the websites under test. The script will **send only 10 HTTP(S) request per second one time a day** to measure the performance.
 
 HTTP request timeout is set to 30 seconds. If the script doesn't receive any response from Page Speed, then that request will be ignored. 
 
@@ -30,9 +23,6 @@ Here are the [URLs](urls_bf.yaml) which will be tested. If you would like to add
     - Ubuntu latest
 - Influx DB Cloud (Free Plan)
 
-# ⌛ Test Window
-
-Test will start at 12.00 AM EST on Nov 25 and ends at 12.01 AM EST Nov 30.
 
 # 🔢 Results
 
@@ -65,12 +55,12 @@ Following metrics will be captured:
  on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/15 * * * *'
+    - cron:  '0 9 * * *'
 ```
-
- # ❓ FAQs
-
- * Can I view the performance realtime?
-    - Yes. Using the Influx DB cloud, the results will get published instantly.
- * What is the cost involved in this experiment?
-    - Nothing. All are using free resources.😊
+    * Push the changes to your repo.
+    * Check the Actions tab in your repo to see the workflow in action.
+    * Check the InfluxDB cloud to see the results.
+    
+    # 📈 Dashboard
+    
+    Here is the [dashboard](https://us-west-2-1.aws.cloud2.influxdata.com/orgs/1b1b3
