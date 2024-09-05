@@ -1,6 +1,6 @@
 # 🎯 Objective
 
-The objective of this exercise is to measure the response time trend of popular US retail websites during Thanksgiving and Black Friday 2021. This will help us to reveal the performance and its effect of retain giants.  
+The objective of this exercise is to measure the response time trend of popular US retail websites. This will help us to reveal the performance and its effect.  
 
 # 🔝 Strategy
 
