@@ -7,7 +7,6 @@ from core.insights import get_insights
 def main():
     """
     The main context.
-    Start Time: 11/25 06.00 PM EST
     """
     parser = argparse.ArgumentParser(
         description='API Key'
@@ -44,7 +43,7 @@ def main():
         help="Send Influx Org"
     )
     args = parser.parse_args()
-    key = "AIzaSyAmM0Pmb31iKUqUhbwX9_g9WM8KXXWpmns"  # args.apikey
+    key = args.apikey
     bucket = args.bucket
     influxkey = args.influxkey
     influxurl = args.influxurl
