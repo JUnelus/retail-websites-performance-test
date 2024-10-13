@@ -1,8 +1,12 @@
 import yaml
 import argparse
+import os
+from dotenv import load_dotenv
 
 from core.insights import get_insights
 
+# Load environment variables from .env file
+load_dotenv()
 
 def main():
     """
