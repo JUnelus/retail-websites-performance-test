@@ -36,8 +36,8 @@ jobs:
     
     - name: Run Page Speed Insights     
       env:
-        PAGE_SPEED_API_KEY: ${{ secrets.API_KEY }}
-        BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+        PAGE_SPEED_API_KEY: ${{ secrets.PAGE_SPEED_API_KEY }}
+        BUCKET_NAME: ${{ secrets.INFLUX_BUCKET_NAME }}
         INFLUX_API_KEY: ${{ secrets.INFLUX_API_KEY }}
         INFLUX_URL: ${{ secrets.INFLUX_URL }}
         INFLUX_ORG: ${{ secrets.INFLUX_ORG }}

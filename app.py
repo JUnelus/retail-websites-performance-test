@@ -47,11 +47,11 @@ def main():
         help="Send Influx Org"
     )
     args = parser.parse_args()
-    key = args.apikey
-    bucket = args.bucket
-    influxkey = args.influxkey
-    influxurl = args.influxurl
-    influxorg = args.influxorg
+    key = args.apikey # os.getenv('PAGE_SPEED_API_KEY') #
+    bucket = args.bucket # os.getenv('INFLUX_BUCKET_NAME') #
+    influxkey = args.influxkey # os.getenv('INFLUX_API_KEY') #
+    influxurl = args.influxurl # os.getenv('INFLUX_URL') #
+    influxorg = args.influxorg # os.getenv('INFLUX_ORG') #
 
     with open('urls.yaml') as url:
         url = yaml.safe_load(url)

@@ -29,7 +29,7 @@ def get_insights(site, key, bucket, influxkey, influxurl, influxorg):
         time.sleep(2)
 
         # Send URL
-        req = requests.get(url, headers=headers, timeout=30)
+        req = requests.get(url, headers=headers, timeout=70)
         # Receive response and convert into JSON
         res = json.loads(req.text)
         try:
