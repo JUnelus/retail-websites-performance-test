@@ -60,7 +60,7 @@ jobs:
 
     - name: Commit latest release version
       run: |
-        git config --global user.name 'JUnelus'
+        git config --global user.name 'JimmyUnelus'
         git config --global user.email 'JimmyUnelus@gmail.com'
-        git commit -am "Updated the results on $(date +"%Y-%m-%d %H:%M:%S")"
+        git diff --quiet || git commit -am "Updated the results on $(date +"%Y-%m-%d %H:%M:%S")"
         git push
